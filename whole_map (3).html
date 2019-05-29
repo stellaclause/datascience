@@ -1,0 +1,2077 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+<link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1542186754" />
+<script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
+<script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
+<script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+<script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+
+</head>
+<body>
+  <div id="map" style="width: 100%; height: 800px; background: grey" />
+  <script  type="text/javascript" charset="UTF-8" >
+    
+
+/**
+ * Adds markers to the map highlighting the locations of the captials of
+ * France, Italy, Germany, Spain and the United Kingdom.
+ *
+ * @param  {H.Map} map      A HERE Map instance within the application
+ */
+function addMarkersToMap(map) {
+  //var parisMarker = new H.map.Marker({lat:48.8567, lng:2.3508});
+  //map.addObject(parisMarker);
+}
+
+/**
+ * Boilerplate map initialization code starts below:
+ */
+
+//Step 1: initialize communication with the platform
+var platform = new H.service.Platform({
+  app_id: 'devportal-demo-20180625',
+  app_code: '9v2BkviRwi9Ot26kp2IysQ',
+  useHTTPS: true
+});
+var pixelRatio = window.devicePixelRatio || 1;
+var defaultLayers = platform.createDefaultLayers({
+  tileSize: pixelRatio === 1 ? 256 : 512,
+  ppi: pixelRatio === 1 ? undefined : 320
+});
+
+//Step 2: initialize a map - this map is centered over Europe
+var map = new H.Map(document.getElementById('map'),
+  defaultLayers.normal.map,{
+  center: {lat:41, lng:-87},
+  zoom: 4,
+  pixelRatio: pixelRatio
+});
+
+//Step 3: make the map interactive
+// MapEvents enables the event system
+// Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+// Create the default UI components
+var ui = H.ui.UI.createDefault(map, defaultLayers);
+
+var IconClst0 = new H.map.Icon("https://image.flaticon.com/icons/svg/252/252025.svg", {size: {w: 32, h: 32}});var IconClst1 = new H.map.Icon("https://image.flaticon.com/icons/svg/58/58960.svg", {size: {w: 32, h: 32}});var IconClst2 = new H.map.Icon("https://image.flaticon.com/icons/svg/149/149060.svg", {size: {w: 32, h: 32}});var IconClst3 = new H.map.Icon("https://image.flaticon.com/icons/svg/1502/1502944.svg", {size: {w: 32, h: 32}});
+            var parisMarker = new H.map.Marker({lat:41.894677, lng:-87.657325}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894677, lng:-87.657325}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894677, lng:-87.657325}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896134, lng:-87.656596}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892384, lng:-87.657727}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891654, lng:-87.657253}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892947, lng:-87.657578}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895425, lng:-87.655176}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891294, lng:-87.647681}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891218, lng:-87.654689}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895996, lng:-87.652479}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893242, lng:-87.655705}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895398, lng:-87.655765}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894606, lng:-87.657323}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892970, lng:-87.655988}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891158, lng:-87.659117}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891242, lng:-87.652356}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895842, lng:-87.654819}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892833, lng:-87.657683}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895871, lng:-87.656071}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895466, lng:-87.655766}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891208, lng:-87.655734}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894606, lng:-87.657323}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894424, lng:-87.657612}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893134, lng:-87.647809}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895543, lng:-87.655424}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891338, lng:-87.648943}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894502, lng:-87.653392}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891230, lng:-87.653522}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896139, lng:-87.656346}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894282, lng:-87.653500}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891294, lng:-87.647681}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893959, lng:-87.647841}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892783, lng:-87.647765}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895916, lng:-87.654690}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891733, lng:-87.648654}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892564, lng:-87.657920}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894706, lng:-87.652805}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896146, lng:-87.656012}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891281, lng:-87.648559}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894424, lng:-87.657612}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648851}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894282, lng:-87.653500}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895763, lng:-87.651306}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893902, lng:-87.656463}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896139, lng:-87.656346}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894456, lng:-87.654080}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891189, lng:-87.657470}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894428, lng:-87.653405}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891208, lng:-87.655734}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891218, lng:-87.654689}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891903, lng:-87.648640}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891258, lng:-87.647931}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895688, lng:-87.654335}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893391, lng:-87.657057}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891189, lng:-87.657470}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894013, lng:-87.652325}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894360, lng:-87.657611}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894019, lng:-87.651268}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895584, lng:-87.655389}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893330, lng:-87.656913}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895962, lng:-87.655065}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893485, lng:-87.647734}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892086, lng:-87.649179}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893571, lng:-87.647824}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893999, lng:-87.656383}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893901, lng:-87.656803}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895916, lng:-87.654690}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891207, lng:-87.655872}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891888, lng:-87.647765}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892961, lng:-87.657570}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895826, lng:-87.652768}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895204, lng:-87.652751}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892002, lng:-87.657261}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896086, lng:-87.659444}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893454, lng:-87.650126}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891189, lng:-87.657470}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891189, lng:-87.657470}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891275, lng:-87.649332}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894772, lng:-87.656076}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895417, lng:-87.649506}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891846, lng:-87.648818}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648851}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891171, lng:-87.659053}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892661, lng:-87.657277}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891364, lng:-87.647768}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892961, lng:-87.657570}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895216, lng:-87.655701}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891463, lng:-87.658855}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891286, lng:-87.648030}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891876, lng:-87.648426}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891188, lng:-87.657569}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891280, lng:-87.648734}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892884, lng:-87.657283}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894570, lng:-87.657322}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894024, lng:-87.651765}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891219, lng:-87.659065}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895178, lng:-87.647860}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893380, lng:-87.657939}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893592, lng:-87.651534}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893902, lng:-87.656463}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894365, lng:-87.657317}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891919, lng:-87.648492}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891158, lng:-87.659117}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891364, lng:-87.647768}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891281, lng:-87.648559}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892246, lng:-87.649431}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891793, lng:-87.658242}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891280, lng:-87.648734}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893207, lng:-87.657012}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891846, lng:-87.648818}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891770, lng:-87.658605}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891203, lng:-87.656210}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891949, lng:-87.648928}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894773, lng:-87.657621}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891227, lng:-87.653785}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891846, lng:-87.648818}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891188, lng:-87.657569}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891903, lng:-87.648640}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891949, lng:-87.648928}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895543, lng:-87.655424}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891163, lng:-87.659548}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891544, lng:-87.655948}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896095, lng:-87.658871}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891163, lng:-87.659631}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894333, lng:-87.656100}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895581, lng:-87.647863}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891189, lng:-87.657470}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895466, lng:-87.655766}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891677, lng:-87.647782}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892564, lng:-87.657920}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891266, lng:-87.650008}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895033, lng:-87.653423}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896148, lng:-87.655909}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892120, lng:-87.649098}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891218, lng:-87.654689}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895186, lng:-87.658420}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894972, lng:-87.659588}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891146, lng:-87.647775}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896073, lng:-87.654618}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895617, lng:-87.658667}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891171, lng:-87.659053}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891280, lng:-87.648647}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893380, lng:-87.657588}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893902, lng:-87.656463}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893902, lng:-87.656463}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892947, lng:-87.657578}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648851}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891265, lng:-87.650056}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893467, lng:-87.648918}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892961, lng:-87.657570}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891718, lng:-87.658303}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891280, lng:-87.648734}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892961, lng:-87.657570}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895692, lng:-87.654949}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896139, lng:-87.656346}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895169, lng:-87.655740}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892961, lng:-87.657570}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891219, lng:-87.659065}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648851}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894963, lng:-87.655567}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891208, lng:-87.648940}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891272, lng:-87.649523}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891364, lng:-87.647768}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893954, lng:-87.656762}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648851}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891208, lng:-87.655734}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891151, lng:-87.655938}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891280, lng:-87.648734}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891316, lng:-87.657539}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891280, lng:-87.648734}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895028, lng:-87.653717}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892877, lng:-87.657292}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648947}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891919, lng:-87.648492}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895543, lng:-87.655424}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891207, lng:-87.655872}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895169, lng:-87.655740}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895105, lng:-87.649044}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893485, lng:-87.647734}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891231, lng:-87.653405}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892182, lng:-87.648878}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893237, lng:-87.649849}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894498, lng:-87.653905}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891770, lng:-87.658605}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895351, lng:-87.655239}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891208, lng:-87.648940}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892947, lng:-87.657578}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892947, lng:-87.657578}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892947, lng:-87.657578}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891163, lng:-87.659715}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891903, lng:-87.648640}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892211, lng:-87.657560}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648851}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893834, lng:-87.651463}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891625, lng:-87.649827}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891294, lng:-87.647681}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891173, lng:-87.658948}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895618, lng:-87.655013}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892961, lng:-87.657570}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893872, lng:-87.651523}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892884, lng:-87.657283}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891680, lng:-87.648573}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894407, lng:-87.658609}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896118, lng:-87.653453}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893737, lng:-87.647831}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891208, lng:-87.655734}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894584, lng:-87.657616}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894095, lng:-87.656649}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894428, lng:-87.657319}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891313, lng:-87.648009}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891208, lng:-87.648940}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648851}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891383, lng:-87.657540}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895178, lng:-87.647860}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895962, lng:-87.655065}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891173, lng:-87.658948}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891191, lng:-87.657308}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893902, lng:-87.656463}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893902, lng:-87.656463}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895962, lng:-87.655065}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891254, lng:-87.651128}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891266, lng:-87.650008}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895347, lng:-87.658337}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891208, lng:-87.648940}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895513, lng:-87.652759}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891189, lng:-87.657470}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892366, lng:-87.647753}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891220, lng:-87.654486}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896073, lng:-87.654618}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891146, lng:-87.647775}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893628, lng:-87.651348}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892211, lng:-87.657560}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892884, lng:-87.657283}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892884, lng:-87.657283}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891280, lng:-87.648734}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891609, lng:-87.655950}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894773, lng:-87.657621}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896139, lng:-87.656346}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891280, lng:-87.648734}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893599, lng:-87.657987}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891846, lng:-87.648818}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892300, lng:-87.647750}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895664, lng:-87.647959}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891280, lng:-87.648734}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892947, lng:-87.657578}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893450, lng:-87.650408}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895981, lng:-87.655798}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892384, lng:-87.657727}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892650, lng:-87.658022}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895962, lng:-87.655065}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892947, lng:-87.657578}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891888, lng:-87.647765}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893038, lng:-87.657150}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894014, lng:-87.647843}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896148, lng:-87.655909}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891846, lng:-87.648818}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893381, lng:-87.649001}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895692, lng:-87.654949}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895688, lng:-87.654335}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893038, lng:-87.657150}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648851}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895164, lng:-87.655397}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891151, lng:-87.655938}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892134, lng:-87.655963}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895759, lng:-87.654896}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891154, lng:-87.655644}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891280, lng:-87.648734}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891270, lng:-87.649715}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648851}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892961, lng:-87.657570}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891230, lng:-87.653522}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891280, lng:-87.648734}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895737, lng:-87.658769}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896156, lng:-87.655475}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891718, lng:-87.658303}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894481, lng:-87.656322}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893038, lng:-87.657150}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891402, lng:-87.658907}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891531, lng:-87.648653}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891793, lng:-87.658242}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891910, lng:-87.658145}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892504, lng:-87.649382}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648851}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895842, lng:-87.654819}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893592, lng:-87.651534}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891173, lng:-87.658948}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893959, lng:-87.647841}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893750, lng:-87.657303}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892125, lng:-87.647743}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894292, lng:-87.656482}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891784, lng:-87.657549}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892961, lng:-87.657570}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895148, lng:-87.658111}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895052, lng:-87.655492}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892366, lng:-87.647753}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891364, lng:-87.647768}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891280, lng:-87.648734}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648851}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894360, lng:-87.657611}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893380, lng:-87.657588}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648851}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893591, lng:-87.658423}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891207, lng:-87.655872}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895638, lng:-87.652763}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893920, lng:-87.657601}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891146, lng:-87.647775}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891280, lng:-87.648734}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895513, lng:-87.652759}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891173, lng:-87.658948}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893377, lng:-87.658096}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891189, lng:-87.657470}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891208, lng:-87.655734}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891277, lng:-87.649140}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892884, lng:-87.657283}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892366, lng:-87.647753}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891903, lng:-87.648640}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891919, lng:-87.648492}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893959, lng:-87.647841}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893602, lng:-87.657770}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893571, lng:-87.647824}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893467, lng:-87.657590}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894570, lng:-87.657322}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891693, lng:-87.659196}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895123, lng:-87.655779}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893099, lng:-87.657288}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891163, lng:-87.659631}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891208, lng:-87.648940}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894332, lng:-87.652680}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892661, lng:-87.647763}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894748, lng:-87.657327}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894332, lng:-87.652680}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892961, lng:-87.657570}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891291, lng:-87.648648}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892169, lng:-87.650130}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893378, lng:-87.658017}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893959, lng:-87.647841}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893959, lng:-87.647841}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891158, lng:-87.659117}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895058, lng:-87.651286}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896093, lng:-87.658975}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892650, lng:-87.650064}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892884, lng:-87.657283}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891236, lng:-87.647765}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891770, lng:-87.658605}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894499, lng:-87.657320}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896156, lng:-87.655475}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893038, lng:-87.657150}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896139, lng:-87.656346}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891270, lng:-87.649715}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891173, lng:-87.658948}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891230, lng:-87.653522}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894517, lng:-87.657518}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891283, lng:-87.648295}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891236, lng:-87.647765}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893391, lng:-87.657057}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892354, lng:-87.647679}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894534, lng:-87.657321}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891196, lng:-87.656802}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895584, lng:-87.655389}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895642, lng:-87.654263}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894424, lng:-87.657612}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893207, lng:-87.657584}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895688, lng:-87.654335}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892431, lng:-87.657856}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895543, lng:-87.655424}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893959, lng:-87.647841}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895612, lng:-87.650862}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894257, lng:-87.659901}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895887, lng:-87.655131}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895127, lng:-87.655429}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896156, lng:-87.655475}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891191, lng:-87.657308}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648851}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895962, lng:-87.654761}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891208, lng:-87.648940}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892366, lng:-87.647753}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648947}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648851}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891282, lng:-87.655941}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891188, lng:-87.657569}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891189, lng:-87.657470}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891187, lng:-87.657667}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891151, lng:-87.655938}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891242, lng:-87.652356}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891202, lng:-87.647853}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891770, lng:-87.658605}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892619, lng:-87.657871}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893920, lng:-87.657601}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895615, lng:-87.650697}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894364, lng:-87.656074}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648851}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893737, lng:-87.647831}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892339, lng:-87.649100}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896156, lng:-87.655475}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893905, lng:-87.649015}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648851}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891266, lng:-87.650008}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891236, lng:-87.647765}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894094, lng:-87.649954}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891236, lng:-87.647765}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895096, lng:-87.653849}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895660, lng:-87.655325}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893959, lng:-87.647841}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648947}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892300, lng:-87.647750}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648947}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893959, lng:-87.647841}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891208, lng:-87.648940}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891207, lng:-87.655872}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895812, lng:-87.655196}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893576, lng:-87.659367}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891189, lng:-87.657470}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894125, lng:-87.647848}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892366, lng:-87.647753}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891280, lng:-87.648734}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894606, lng:-87.657323}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891208, lng:-87.655734}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892366, lng:-87.647753}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891770, lng:-87.658605}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891347, lng:-87.655943}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891151, lng:-87.655938}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892619, lng:-87.657871}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896139, lng:-87.656346}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893207, lng:-87.657012}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895118, lng:-87.652578}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892366, lng:-87.647753}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896073, lng:-87.654618}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895373, lng:-87.655304}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895344, lng:-87.658630}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892619, lng:-87.657871}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891226, lng:-87.653960}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891770, lng:-87.658605}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893453, lng:-87.652227}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893391, lng:-87.657057}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894424, lng:-87.657612}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891718, lng:-87.658303}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891173, lng:-87.658948}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895842, lng:-87.654819}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893249, lng:-87.648792}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896073, lng:-87.654618}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891210, lng:-87.655560}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895759, lng:-87.654896}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891236, lng:-87.647765}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648851}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891907, lng:-87.658493}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891294, lng:-87.647681}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894372, lng:-87.652291}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894402, lng:-87.647856}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891294, lng:-87.647681}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892366, lng:-87.647753}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896073, lng:-87.654618}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893866, lng:-87.651053}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896086, lng:-87.659444}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892384, lng:-87.657727}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892300, lng:-87.647750}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894372, lng:-87.652291}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895309, lng:-87.655622}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891236, lng:-87.647765}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648851}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891770, lng:-87.658605}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893920, lng:-87.657601}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895425, lng:-87.655176}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893223, lng:-87.650960}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892661, lng:-87.657277}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893902, lng:-87.656463}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893332, lng:-87.647821}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891395, lng:-87.647699}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892947, lng:-87.657578}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891230, lng:-87.653522}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893642, lng:-87.652499}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892349, lng:-87.648199}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895584, lng:-87.655389}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891285, lng:-87.655647}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894424, lng:-87.657612}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894360, lng:-87.657611}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892947, lng:-87.657578}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891253, lng:-87.657243}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892134, lng:-87.655963}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893248, lng:-87.657291}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891184, lng:-87.658060}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891770, lng:-87.658605}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891270, lng:-87.649715}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893576, lng:-87.659367}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895439, lng:-87.654956}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892884, lng:-87.657283}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892854, lng:-87.649930}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891220, lng:-87.654486}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892619, lng:-87.657871}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892077, lng:-87.657556}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893271, lng:-87.647821}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894224, lng:-87.652065}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895543, lng:-87.655424}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895543, lng:-87.655424}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894481, lng:-87.656322}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894450, lng:-87.656349}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896073, lng:-87.654618}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891294, lng:-87.647681}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891832, lng:-87.658554}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894570, lng:-87.657322}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894677, lng:-87.657325}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895543, lng:-87.655424}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895612, lng:-87.650862}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895515, lng:-87.648763}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891182, lng:-87.658257}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894963, lng:-87.655567}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891171, lng:-87.659053}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891230, lng:-87.653522}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891146, lng:-87.647775}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891280, lng:-87.648734}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895597, lng:-87.654191}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894828, lng:-87.649973}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891163, lng:-87.659548}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892347, lng:-87.648328}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892790, lng:-87.657721}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891270, lng:-87.650112}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891242, lng:-87.652356}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891163, lng:-87.659548}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892505, lng:-87.657972}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894230, lng:-87.652521}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895584, lng:-87.655389}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895158, lng:-87.650636}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894569, lng:-87.647861}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891236, lng:-87.647765}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891178, lng:-87.658653}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893901, lng:-87.656803}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895023, lng:-87.657900}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891294, lng:-87.647681}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893667, lng:-87.657595}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893592, lng:-87.651534}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896146, lng:-87.656012}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895584, lng:-87.655389}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896156, lng:-87.655475}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895842, lng:-87.654819}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893699, lng:-87.657302}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895006, lng:-87.655531}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892354, lng:-87.647808}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895759, lng:-87.654896}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891242, lng:-87.652356}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895389, lng:-87.654317}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895178, lng:-87.647860}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891208, lng:-87.655734}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892366, lng:-87.647753}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894496, lng:-87.654096}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895584, lng:-87.655389}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891291, lng:-87.647769}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894014, lng:-87.647843}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893249, lng:-87.648792}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891146, lng:-87.647775}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892188, lng:-87.647746}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893038, lng:-87.657150}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891236, lng:-87.647765}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891146, lng:-87.647775}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895881, lng:-87.654785}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896073, lng:-87.654618}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891236, lng:-87.647765}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894481, lng:-87.656322}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895759, lng:-87.654896}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891189, lng:-87.657470}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891208, lng:-87.655734}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891276, lng:-87.649236}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893237, lng:-87.649849}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891270, lng:-87.650112}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891364, lng:-87.647768}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896151, lng:-87.655800}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896170, lng:-87.654559}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892354, lng:-87.647679}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893391, lng:-87.657057}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894094, lng:-87.649954}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895178, lng:-87.647860}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891242, lng:-87.652356}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895266, lng:-87.647777}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893391, lng:-87.657057}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896139, lng:-87.656346}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891158, lng:-87.659117}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891146, lng:-87.647775}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891770, lng:-87.658605}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891241, lng:-87.652443}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891158, lng:-87.659117}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894364, lng:-87.656074}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892384, lng:-87.657727}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893959, lng:-87.647841}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895239, lng:-87.655334}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891208, lng:-87.655734}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891218, lng:-87.654689}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891208, lng:-87.655734}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893902, lng:-87.656463}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893318, lng:-87.656008}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895425, lng:-87.655176}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891270, lng:-87.650112}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892961, lng:-87.657570}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893467, lng:-87.657590}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891294, lng:-87.647681}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892947, lng:-87.657578}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893737, lng:-87.647831}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893896, lng:-87.653567}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893014, lng:-87.647781}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891888, lng:-87.647765}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895796, lng:-87.654954}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894481, lng:-87.656322}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895795, lng:-87.655508}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894595, lng:-87.649030}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891236, lng:-87.647765}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896177, lng:-87.654016}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893033, lng:-87.657580}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891242, lng:-87.652356}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892918, lng:-87.657607}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891202, lng:-87.647853}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891205, lng:-87.656041}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896139, lng:-87.656346}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895542, lng:-87.655077}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891541, lng:-87.659348}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891294, lng:-87.647681}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893380, lng:-87.657588}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896134, lng:-87.656596}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891708, lng:-87.658655}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893033, lng:-87.657580}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891709, lng:-87.657899}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896139, lng:-87.656346}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891584, lng:-87.658756}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891189, lng:-87.657470}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891228, lng:-87.653697}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893038, lng:-87.657150}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892961, lng:-87.657570}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893465, lng:-87.647820}, {icon: IconClst1});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891218, lng:-87.654689}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896124, lng:-87.657179}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896157, lng:-87.655439}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895033, lng:-87.653423}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895842, lng:-87.654819}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891283, lng:-87.658660}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893486, lng:-87.651368}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.894481, lng:-87.656322}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892772, lng:-87.655981}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895466, lng:-87.655766}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891158, lng:-87.659117}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.896156, lng:-87.655475}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893975, lng:-87.652138}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892687, lng:-87.650121}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892300, lng:-87.647750}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895239, lng:-87.655334}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891279, lng:-87.648851}, {icon: IconClst2});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.893642, lng:-87.652499}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.895584, lng:-87.655389}, {icon: IconClst3});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.892947, lng:-87.657578}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+            var parisMarker = new H.map.Marker({lat:41.891218, lng:-87.654689}, {icon: IconClst0});
+            map.addObject(parisMarker);
+        
+
+// Now use the map as required...
+addMarkersToMap(map);
+  </script>
+</body>
+</html>
